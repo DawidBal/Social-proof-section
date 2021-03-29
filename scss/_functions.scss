@@ -1,0 +1,6 @@
+@use 'sass:map';
+@use 'variables';
+
+@function setWeight($fontWeight: normal) {
+  @return map.get(variables.$font-weights, $fontWeight);
+}

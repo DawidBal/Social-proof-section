@@ -1,0 +1,148 @@
+:root {
+  /* Primary */
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  /* Neutral */
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+  --white: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 93.75%;
+  font-family: "Spartan", sans-serif;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1.1fr;
+  gap: 5rem;
+  padding: 10rem;
+  font-weight: 500;
+  position: relative;
+}
+.main::before, .main::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+.main::before {
+  background: url("../images/bg-pattern-top-desktop.svg") no-repeat;
+  background-position-x: 10rem;
+}
+.main::after {
+  background: url("../images/bg-pattern-bottom-desktop.svg") no-repeat;
+  background-position: bottom;
+}
+
+.c-title {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.c-text {
+  color: var(--dark-grayish-magenta);
+  font-size: 1.06rem;
+}
+
+.c-text--big {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--very-dark-magenta);
+}
+
+.c-rates {
+  display: grid;
+  align-items: center;
+}
+
+.c-rate {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 5px;
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  background: var(--light-grayish-magenta);
+}
+.c-rate:nth-child(1) {
+  justify-self: flex-start;
+}
+.c-rate:nth-child(2) {
+  justify-self: center;
+}
+.c-rate:nth-child(3) {
+  justify-self: flex-end;
+}
+.c-rate__text {
+  padding-left: 1rem;
+  padding-right: 3rem;
+}
+
+.c-rate-5 {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0 1rem;
+}
+
+.c-reviews {
+  grid-column: 1/-1;
+  display: flex;
+  gap: 3rem;
+}
+
+.c-review {
+  flex: 1;
+  background: var(--very-dark-magenta);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.c-review:nth-child(1) {
+  align-self: flex-start;
+}
+.c-review:nth-child(2) {
+  align-self: center;
+}
+.c-review:nth-child(3) {
+  align-self: flex-end;
+}
+.c-review__person {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.c-review__avatar {
+  border-radius: 50%;
+  max-width: 20%;
+  padding: 0.5rem;
+}
+.c-review__title {
+  font-size: 1rem;
+  color: var(--white);
+}
+.c-review__verified {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--soft-pink);
+}
+.c-review__text {
+  margin-top: 2rem;
+  font-weight: 400;
+  color: var(--white);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */
