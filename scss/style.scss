@@ -82,11 +82,13 @@ html {
 .c-rate {
   display: flex;
   align-items: center;
-  padding: 1rem 3rem 1rem 1rem;
+  width: 85%;
+  padding: 1rem;
   border-radius: 5px;
   color: var(--very-dark-magenta);
   font-weight: functions.setWeight(bold);
   background: var(--light-grayish-magenta);
+
   &:nth-child(1) {
     justify-self: flex-start;
   }
