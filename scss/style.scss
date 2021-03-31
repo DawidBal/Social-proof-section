@@ -8,9 +8,9 @@ html {
 .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1.1fr;
+  grid-template-rows: 1fr 1.2fr;
   gap: 5rem;
-  padding: 10rem;
+  padding: 8rem 10rem;
   max-width: 96rem;
   margin: 0 auto;
   font-weight: functions.setWeight(medium);
@@ -59,7 +59,7 @@ html {
   color: var(--dark-grayish-magenta);
   font-size: 1.06rem;
   &--big {
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 1;
     font-weight: functions.setWeight(bold);
     color: var(--very-dark-magenta);
@@ -83,7 +83,7 @@ html {
   display: flex;
   align-items: center;
   width: 85%;
-  padding: 1rem;
+  padding: 1.3rem;
   border-radius: 5px;
   color: var(--very-dark-magenta);
   font-weight: functions.setWeight(bold);
