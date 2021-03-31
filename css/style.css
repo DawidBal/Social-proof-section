@@ -114,14 +114,9 @@ html {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 2rem;
+    width: auto;
   }
-  .c-rate:nth-child(1) {
-    justify-self: stretch;
-  }
-  .c-rate:nth-child(2) {
-    justify-self: stretch;
-  }
-  .c-rate:nth-child(3) {
+  .c-rate:nth-child(1), .c-rate:nth-child(2), .c-rate:nth-child(3) {
     justify-self: stretch;
   }
 }
@@ -190,6 +185,10 @@ html {
 
   .c-review__avatar {
     padding: 0;
+  }
+
+  .c-review:nth-child(1), .c-review:nth-child(2), .c-review:nth-child(3) {
+    align-self: stretch;
   }
 }
 .attribution {

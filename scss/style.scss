@@ -108,12 +108,10 @@ html {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem 2rem;
-    &:nth-child(1) {
-      justify-self: stretch;
-    }
-    &:nth-child(2) {
-      justify-self: stretch;
-    }
+    width: auto;
+
+    &:nth-child(1),
+    &:nth-child(2),
     &:nth-child(3) {
       justify-self: stretch;
     }
@@ -185,6 +183,14 @@ html {
   }
   .c-review__avatar {
     padding: 0;
+  }
+
+  .c-review {
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      align-self: stretch;
+    }
   }
 }
 .attribution {
