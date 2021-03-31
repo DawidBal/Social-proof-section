@@ -11,6 +11,8 @@ html {
   grid-template-rows: 1fr 1.1fr;
   gap: 5rem;
   padding: 10rem;
+  max-width: 96rem;
+  margin: 0 auto;
   font-weight: functions.setWeight(medium);
   position: relative;
 
@@ -33,6 +35,21 @@ html {
   }
 }
 
+@media screen and (max-width: 80.625rem) {
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 3rem;
+    padding: 5rem 2rem;
+    &::before {
+      background-position-x: -17rem;
+    }
+    &::after {
+      background-position: bottom left;
+    }
+  }
+}
+
 .c-title {
   display: flex;
   flex-direction: column;
@@ -41,12 +58,21 @@ html {
 .c-text {
   color: var(--dark-grayish-magenta);
   font-size: 1.06rem;
+  &--big {
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: functions.setWeight(bold);
+    color: var(--very-dark-magenta);
+  }
 }
-.c-text--big {
-  font-size: 4rem;
-  line-height: 1;
-  font-weight: functions.setWeight(bold);
-  color: var(--very-dark-magenta);
+
+@media screen and (max-width: 80.625rem) {
+  .c-title {
+    text-align: center;
+  }
+  .c-text--big {
+    font-size: 2rem;
+  }
 }
 
 .c-rates {
@@ -56,7 +82,7 @@ html {
 .c-rate {
   display: flex;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1rem 3rem 1rem 1rem;
   border-radius: 5px;
   color: var(--very-dark-magenta);
   font-weight: functions.setWeight(bold);
@@ -70,9 +96,25 @@ html {
   &:nth-child(3) {
     justify-self: flex-end;
   }
-  &__text {
-    padding-left: 1rem;
-    padding-right: 3rem;
+}
+
+@media screen and (max-width: 80.625rem) {
+  .c-rates {
+    gap: 1rem;
+  }
+  .c-rate {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    &:nth-child(1) {
+      justify-self: stretch;
+    }
+    &:nth-child(2) {
+      justify-self: stretch;
+    }
+    &:nth-child(3) {
+      justify-self: stretch;
+    }
   }
 }
 
@@ -87,6 +129,7 @@ html {
   display: flex;
   gap: 3rem;
 }
+
 .c-review {
   flex: 1;
   background: var(--very-dark-magenta);
@@ -124,8 +167,22 @@ html {
   }
   &__text {
     margin-top: 2rem;
+    font-size: 0.95rem;
     font-weight: functions.setWeight(normal);
     color: var(--white);
+  }
+}
+
+@media screen and (max-width: 80.625rem) {
+  .c-reviews {
+    gap: 1rem;
+    flex-direction: column;
+  }
+  .c-review__text {
+    font-size: 0.8rem;
+  }
+  .c-review__avatar {
+    padding: 0;
   }
 }
 .attribution {

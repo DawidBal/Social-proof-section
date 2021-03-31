@@ -19,6 +19,8 @@ html {
   grid-template-rows: 1fr 1.1fr;
   gap: 5rem;
   padding: 10rem;
+  max-width: 96rem;
+  margin: 0 auto;
   font-weight: 500;
   position: relative;
 }
@@ -38,6 +40,20 @@ html {
   background-position: bottom;
 }
 
+@media screen and (max-width: 80.625rem) {
+  .main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 3rem;
+    padding: 5rem 2rem;
+  }
+  .main::before {
+    background-position-x: -17rem;
+  }
+  .main::after {
+    background-position: bottom left;
+  }
+}
 .c-title {
   display: flex;
   flex-direction: column;
@@ -48,7 +64,6 @@ html {
   color: var(--dark-grayish-magenta);
   font-size: 1.06rem;
 }
-
 .c-text--big {
   font-size: 4rem;
   line-height: 1;
@@ -56,6 +71,15 @@ html {
   color: var(--very-dark-magenta);
 }
 
+@media screen and (max-width: 80.625rem) {
+  .c-title {
+    text-align: center;
+  }
+
+  .c-text--big {
+    font-size: 2rem;
+  }
+}
 .c-rates {
   display: grid;
   align-items: center;
@@ -64,7 +88,7 @@ html {
 .c-rate {
   display: flex;
   align-items: center;
-  padding: 1.5rem;
+  padding: 1rem 3rem 1rem 1rem;
   border-radius: 5px;
   color: var(--very-dark-magenta);
   font-weight: 700;
@@ -79,11 +103,27 @@ html {
 .c-rate:nth-child(3) {
   justify-self: flex-end;
 }
-.c-rate__text {
-  padding-left: 1rem;
-  padding-right: 3rem;
-}
 
+@media screen and (max-width: 80.625rem) {
+  .c-rates {
+    gap: 1rem;
+  }
+
+  .c-rate {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+  .c-rate:nth-child(1) {
+    justify-self: stretch;
+  }
+  .c-rate:nth-child(2) {
+    justify-self: stretch;
+  }
+  .c-rate:nth-child(3) {
+    justify-self: stretch;
+  }
+}
 .c-rate-5 {
   display: flex;
   gap: 0.5rem;
@@ -132,10 +172,25 @@ html {
 }
 .c-review__text {
   margin-top: 2rem;
+  font-size: 0.95rem;
   font-weight: 400;
   color: var(--white);
 }
 
+@media screen and (max-width: 80.625rem) {
+  .c-reviews {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .c-review__text {
+    font-size: 0.8rem;
+  }
+
+  .c-review__avatar {
+    padding: 0;
+  }
+}
 .attribution {
   font-size: 11px;
   text-align: center;
